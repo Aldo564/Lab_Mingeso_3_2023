@@ -9,14 +9,12 @@ class verProveedoresComponent extends Component {
         }
     }
 
-    /*
     componentDidMount()
     {
         fetch("http://localhost:8080/preguntas/1")
         .then((response) => response.json())
         .then((data) => this.setState({ preguntas: data }));
     }
-    */
     
     render() {
         return (
