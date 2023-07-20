@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@syncfusion/ej2-react-buttons": "^22.1.39",
+    "@syncfusion/ej2-react-grids": "^22.1.39",
+    "@syncfusion/ej2-react-navigations": "^22.1.39"
+  }
+}
