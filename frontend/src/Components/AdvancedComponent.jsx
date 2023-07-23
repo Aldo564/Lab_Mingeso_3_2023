@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import '../App.css';
 import CodeBlock from "./CodeBlockComponent";
+import ResultadoFinal from "./ResultsComponent";
 
-class RookieComponent extends Component {
+class AdvanceComponent extends Component {
 
     constructor(props){
         super(props);
@@ -19,7 +20,7 @@ class RookieComponent extends Component {
 
     componentDidMount()
     {
-        fetch("http://localhost:8080/pytest/preguntas/1")
+        fetch("http://localhost:8080/pytest/preguntas/2")
             .then((response) => response.json())
             .then((data) => this.setState({ preguntas: data }));
 
@@ -66,13 +67,16 @@ class RookieComponent extends Component {
         }
     };
 
+
+
+
     render() {
         const { tiempoTranscurrido } = this.state;
 
         return (
             <div>
                 <header>
-                    <h1> Prueba nivel Novato </h1>
+                    <h1> Prueba nivel Avanzado </h1>
                 </header>
                 <nav>
                     <ul>
@@ -116,4 +120,4 @@ class RookieComponent extends Component {
     }
 }
 
-export default RookieComponent;
+export default AdvanceComponent;

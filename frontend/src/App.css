@@ -181,3 +181,19 @@ ul.registration-form input[type="submit"] {
 ul.registration-form input[type="submit"]:hover {
   background-color: #fdd78a;
 }
+
+.codigo-input-container {
+  margin: 0;
+}
+
+.codigo-input {
+  font-family: 'Courier New', monospace;
+  padding: 10px;
+  width: 500px;
+  height: 200px;
+  background-color: #282a36;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+}

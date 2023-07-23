@@ -33,7 +33,7 @@ class TestComponent extends Component {
                                         </a>
                                     </td>
                                     <td>
-                                        <a className="btn-secondary-container" href="/test/alta">
+                                        <a className="btn-secondary-container" href="/test/alto">
                                             <button className="btn-secondary"> Avanzado </button>
                                         </a>
                                     </td>

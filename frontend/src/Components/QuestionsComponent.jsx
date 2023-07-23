@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import CodeBlock from "./CodeBlockComponent";
 
+
 class QuestionsComponent extends Component {
     constructor(props){
         super(props);
@@ -11,7 +12,7 @@ class QuestionsComponent extends Component {
 
     componentDidMount()
     {
-        fetch("http://localhost:8082/pytest/preguntas")
+        fetch("http://localhost:8080/pytest/preguntas")
         .then((response) => response.json())
         .then((data) => this.setState({ preguntas: data }));
     }
@@ -25,6 +26,7 @@ class QuestionsComponent extends Component {
                 <nav>
                     <ul>
                         <li><a href="/">Volver al menú principal</a></li>
+                        <li><a href="/preguntas/ingresar">Ingresar pregunta nueva</a></li>
                     </ul>
                 </nav>
                 <div>
