@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import CodeBlock from "./CodeBlockComponent";
 
-class verProveedoresComponent extends Component {
+class QuestionsComponent extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -11,7 +11,7 @@ class verProveedoresComponent extends Component {
 
     componentDidMount()
     {
-        fetch("http://localhost:8080/preguntas/1")
+        fetch("http://localhost:8082/pytest/preguntas")
         .then((response) => response.json())
         .then((data) => this.setState({ preguntas: data }));
     }
@@ -57,4 +57,4 @@ class verProveedoresComponent extends Component {
     }
 }
 
-export default verProveedoresComponent;
+export default QuestionsComponent;

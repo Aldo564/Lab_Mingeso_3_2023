@@ -21,10 +21,11 @@ body {
 }
 
 .contentTable{
+  color: white;
   border-collapse: collapse;
   margin: auto;
   margin-bottom: 5%;
-  font-size: 0.9em;
+  font-size: 1em;
   min-width: 400px;
   border-radius: 10px 10px 10px 10px;
   overflow: hidden;
@@ -39,12 +40,18 @@ body {
 .contentTable th,
 .contentTable td{
   padding: 12px 15px;
+  text-align: left;
+  background-color: #282a36;
 }
 .contentTable tbody tr{
-  border-bottom: 1px solid #dddddd;
+  border: 1px solid #fef8ce;
 }
 .contentTable tbody tr:nth-of-type(even){
-  background-color: #1D4E89;
+  background-color: #282a36;
+}
+
+.contentTable tbody tr:nth-of-type(odd){
+  background-color: #282a36;
 }
 
 body {

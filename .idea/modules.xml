@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Backend/Backend.iml" filepath="$PROJECT_DIR$/Backend/Backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Lab_Mingeso_3_2023.iml" filepath="$PROJECT_DIR$/.idea/Lab_Mingeso_3_2023.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Eureka-Service/src/main/main.iml" filepath="$PROJECT_DIR$/Eureka-Service/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Eureka-Service/src/test/test.iml" filepath="$PROJECT_DIR$/Eureka-Service/src/test/test.iml" />
     </modules>
   </component>
 </project>

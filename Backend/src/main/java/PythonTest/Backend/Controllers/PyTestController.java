@@ -6,8 +6,6 @@ import PythonTest.Backend.Services.PyTestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import java.util.ArrayList;
 
 @RestController
@@ -20,8 +18,18 @@ public class PyTestController {
     @Autowired
     PyTestRepository pyTestRepository;
 
+    @GetMapping("/preguntas")
+    public ResponseEntity<ArrayList<PyTestEntity>> obtenerPreguntas()
+    {
+        ArrayList<PyTestEntity> preguntas = pyTestRepository.getAll();
+        if(preguntas.isEmpty()){
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.ok(preguntas);
+    }
+
     @GetMapping("/preguntas/{dif}")
-    public ResponseEntity<ArrayList<PyTestEntity>> obtenerPreguntas(@PathVariable("dif") Integer dif)
+    public ResponseEntity<ArrayList<PyTestEntity>> obtenerPreguntasDif(@PathVariable("dif") Integer dif)
     {
         ArrayList<PyTestEntity> preguntas = pyTestRepository.findByDif(dif);
         if(preguntas.isEmpty()){

@@ -1,16 +1,7 @@
 import React, {Component} from 'react';
 import '../App.css';
-import Swal from 'sweetalert2';
-import withReactContent from 'sweetalert2-react-content';
 
 class TestComponent extends Component {
-
-    constructor(props) {
-        super(props);
-        this.state = {
-        };
-    }
-
     render() {
         return (
             <div>
@@ -33,17 +24,17 @@ class TestComponent extends Component {
                                 <tr>
                                     <td>
                                         <a className="btn-secondary-container" href="/test/bajo">
-                                            <button className="btn-secondary"> Baja </button>
+                                            <button className="btn-secondary"> Novato </button>
                                         </a>
                                     </td>
                                     <td>
                                         <a className="btn-secondary-container" href="/test/medio">
-                                            <button className="btn-secondary"> Media </button>
+                                            <button className="btn-secondary"> Intermedio </button>
                                         </a>
                                     </td>
                                     <td>
                                         <a className="btn-secondary-container" href="/test/alta">
-                                            <button className="btn-secondary"> Alta </button>
+                                            <button className="btn-secondary"> Avanzado </button>
                                         </a>
                                     </td>
                                 </tr>
