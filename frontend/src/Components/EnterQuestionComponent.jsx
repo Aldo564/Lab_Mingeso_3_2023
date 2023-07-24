@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 import CodeMirror from '@uiw/react-codemirror';
 import { python } from '@codemirror/lang-python';
-import {darcula} from "@uiw/codemirror-theme-darcula";
+import {dracula} from "@uiw/codemirror-theme-dracula";
 
 class EnterQuestionComponent extends Component {
 
@@ -14,12 +14,13 @@ class EnterQuestionComponent extends Component {
             pregunta: '',
             respuesta: '',
             dificultad: '',
+            codigoInicial: '#Escriba el enunciado de su pregunta y el código a continuación\nprint(\'Hola Mundo!\')',
         };
     }
 
-    changePregunta = event => {
+    changePregunta = (value) => {
         this.setState({
-            pregunta: event.target.value
+            pregunta: value
         });
         console.log(this.state.pregunta)
     };
@@ -67,11 +68,15 @@ class EnterQuestionComponent extends Component {
         }
         else
         {
-            fetch(`http://localhost:8080/pytest/pregunta?pregunta=${this.state.pregunta}&respuesta=${this.state.respuesta}&dificultad=${this.state.dificultad}`,
+            fetch(`http://localhost:8080/pytest/pregunta`,
             {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ title: '' }) 
+                body: JSON.stringify({
+                    pregunta: this.state.pregunta,
+                    respuesta: this.state.respuesta,
+                    dificultad: this.state.dificultad,
+                }),
             })
             .catch(err => console.error(err));
 
@@ -85,16 +90,11 @@ class EnterQuestionComponent extends Component {
             this.setState({respuesta: ''});
             this.setState({dificultad: ''});
 
+
+
             event.target.reset();
         }
         
-    }
-
-    keyDownHandler = event => {
-        if (event.key === 'Tab') {
-            event.preventDefault();
-            event.target.value = event.target.value + "\t";
-        }
     }
 
     render() {
@@ -118,12 +118,11 @@ class EnterQuestionComponent extends Component {
                                 <li className="codigo-input-container">
                                     <label>Pregunta</label>
                                     <CodeMirror
-                                        value="#Escriba el enunciado de su pregunta y el código a continuación
-                                       print('Hola Mundo!')"
+                                        value={this.state.codigoInicial}
                                         height="200px"
                                         extensions={[python()]}
-                                        theme={darcula}
-                                        onBlur={this.changePregunta}
+                                        theme={dracula}
+                                        onChange={this.changePregunta}
                                     />
 
 

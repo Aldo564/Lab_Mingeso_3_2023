@@ -49,11 +49,10 @@ public class PyTestController {
     }
 
     @PostMapping("/pregunta")
-    public ResponseEntity<Boolean> guardarPregunta(@RequestParam("pregunta") String pregunta,
-                                                   @RequestParam("respuesta") String respuesta,
-                                                    @RequestParam("dificultad") String dificultad)
+    public ResponseEntity<Boolean> guardarPregunta(@RequestBody PyTestEntity pregunta)
     {
-        pyTestService.guardarData(pregunta, respuesta, Integer.valueOf(dificultad));
+        pyTestRepository.save(pregunta);
         return ResponseEntity.ok(true);
     }
+
 }

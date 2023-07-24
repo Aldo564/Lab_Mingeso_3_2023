@@ -27,7 +27,7 @@ class HomeComponent extends Component {
                             </th>
                             <th>
                                 <h2>¡Bienvenidos!</h2>
-                                <p> En esta pagina web podrás poner a prueba tus conocmientos de Python 3 por medio de pruebas de distintas dificultades!, también podrás agregar preguntas que consideres pertinentes según la dificultad! </p>
+                                <p> En esta pagina web podrás poner a prueba tus conocimientos de Python 3 por medio de pruebas de distintas dificultades!, también podrás agregar preguntas que consideres pertinentes según la dificultad! </p>
                             </th>
                         </tr>
                         </tbody>
