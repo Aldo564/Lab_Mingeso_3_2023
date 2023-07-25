@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import '../App.css';
 import CodeBlock from "./CodeBlockComponent";
 import ResultadoFinal from "./ResultsComponent";
+import withReactContent from "sweetalert2-react-content";
+import Swal from "sweetalert2";
 
 class AdvanceComponent extends Component {
 
@@ -40,19 +42,33 @@ class AdvanceComponent extends Component {
     };
 
     enviarRepuestas = event => {
+        event.preventDefault();
+        const MySwal = withReactContent(Swal);
+        MySwal.fire({
+            title: <strong>¿Está de enviar sus respuestas?</strong>,
+            html: <i>Aun puede volver y cambiar si no esta seguro! Exito!</i>,
+            icon: 'warning',
+            showConfirmButton: true,
+            confirmButtonText: 'Si',
+            confirmButtonColor: '#00FF00',
+            showDenyButton: true,
+            denyButtonText: 'No'
+        }).then(respuesta=>{
+            if(respuesta.isConfirmed){
+                for (let i = 0; i < this.state.preguntas.length; i++) {
+                    this.state.puntaje[i] = this.state.respuestas[i] === this.state.preguntas[i].respuesta;
+                }
 
-        for (let i = 0; i < this.state.preguntas.length; i++) {
-            this.state.puntaje[i] = this.state.respuestas[i] === this.state.preguntas[i].respuesta;
-        }
+                this.setState({ testFinalizado: true });
 
-        this.setState({ testFinalizado: true });
+                localStorage.setItem("puntaje", JSON.stringify(this.state.puntaje));
+                localStorage.setItem("respuestas", JSON.stringify(this.state.respuestas));
+                localStorage.setItem("preguntas", JSON.stringify(this.state.preguntas));
+                localStorage.setItem("tiempoTranscurrido", JSON.stringify(this.state.tiempoTranscurrido));
 
-        localStorage.setItem("puntaje", JSON.stringify(this.state.puntaje));
-        localStorage.setItem("respuestas", JSON.stringify(this.state.respuestas));
-        localStorage.setItem("preguntas", JSON.stringify(this.state.preguntas));
-        localStorage.setItem("tiempoTranscurrido", JSON.stringify(this.state.tiempoTranscurrido));
-
-        window.location.href = "/resultado";
+                window.location.href = "/resultado";
+            }
+        });
     }
 
     componentWillUnmount() {

@@ -46,7 +46,7 @@ class EnterQuestionComponent extends Component {
         {
             MySwal.fire({
                 title: <strong>Error en pregunta</strong>,
-                html: <i>Porfavor escriba una pregunta valido</i>,
+                html: <i>Porfavor escriba una pregunta válido</i>,
                 icon: 'error'
             });
         }
@@ -54,7 +54,7 @@ class EnterQuestionComponent extends Component {
         {
             MySwal.fire({
                 title: <strong>Error en respuesta</strong>,
-                html: <i>Porfavor escriba una respuesta valida</i>,
+                html: <i>Porfavor escriba una respuesta válida</i>,
                 icon: 'error'
             });
         }
@@ -62,7 +62,7 @@ class EnterQuestionComponent extends Component {
         {
             MySwal.fire({
                 title: <strong>Error en dificultad</strong>,
-                html: <i>Porfavor seleccione una dificultad valida</i>,
+                html: <i>Porfavor seleccione una dificultad válida</i>,
                 icon: 'error'
             });
         }
@@ -82,7 +82,7 @@ class EnterQuestionComponent extends Component {
 
             MySwal.fire({
                 title: <strong>Exito!</strong>,
-                html: <i>Se a añadido la pregunta correctamente</i>,
+                html: <i>Se ha añadido la pregunta correctamente</i>,
                 icon: 'success'
             });
 
