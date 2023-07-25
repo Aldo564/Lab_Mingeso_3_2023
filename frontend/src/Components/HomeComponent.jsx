@@ -12,9 +12,9 @@ class HomeComponent extends Component {
                 </div>
             </header>
             <nav>
-                <ul>
-                    <li><a href="/test"> Rendir pruebas</a></li>
-                    <li><a href="/preguntas"> Ver preguntas </a></li>
+                <ul className={"btn-secondary-container"}>
+                    <li className={"btn-secondary"}><a href="/test"> Rendir pruebas</a></li>
+                    <li className={"btn-secondary"}><a href="/preguntas"> Ver preguntas </a></li>
                 </ul>
             </nav>
             <main>

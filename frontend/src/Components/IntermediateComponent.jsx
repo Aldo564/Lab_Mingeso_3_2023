@@ -44,8 +44,8 @@ class IntermediateComponent extends Component {
         event.preventDefault();
         const MySwal = withReactContent(Swal);
         MySwal.fire({
-            title: <strong>¿Está de enviar sus respuestas?</strong>,
-            html: <i>Aun puede volver y cambiar si no esta seguro! Exito!</i>,
+            title: <strong>¿Está seguro de enviar sus respuestas?</strong>,
+            html: <i>Aún puede volver y cambiar si no esta seguro! Exito!</i>,
             icon: 'warning',
             showConfirmButton: true,
             confirmButtonText: 'Si',
@@ -94,8 +94,8 @@ class IntermediateComponent extends Component {
                     <h1> Prueba nivel Intermedio </h1>
                 </header>
                 <nav>
-                    <ul>
-                        <li><a href="/"> Volver al menú principal </a></li>
+                    <ul className={"btn-secondary-container"}>
+                        <li className={"btn-secondary"}><a href="/"> Volver al menú principal </a></li>
                     </ul>
                 </nav>
                 <div>

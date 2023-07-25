@@ -9,8 +9,8 @@ class TestComponent extends Component {
                     <h1> Pruebas </h1>
                 </header>
                 <nav>
-                    <ul>
-                        <li><a href="/"> Volver al menú principal </a></li>
+                    <ul className={"btn-secondary-container"}>
+                        <li className={"btn-secondary"}><a href="/"> Volver al menú principal </a></li>
                     </ul>
                 </nav>
                 <div>

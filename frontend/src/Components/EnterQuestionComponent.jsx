@@ -104,9 +104,9 @@ class EnterQuestionComponent extends Component {
                     <h1>Preguntas</h1>
                 </header>
                 <nav>
-                    <ul>
-                        <li><a href="/">Volver al menú principal</a></li>
-                        <li><a href="/preguntas">Ver preguntas</a></li>
+                    <ul className={"btn-secondary-container"}>
+                        <li className={"btn-secondary"}><a href="/">Volver al menú principal</a></li>
+                        <li className={"btn-secondary"}><a href="/preguntas">Ver preguntas</a></li>
                     </ul>
                 </nav>
                 <div>
