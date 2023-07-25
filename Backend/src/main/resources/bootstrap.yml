@@ -19,6 +19,7 @@ spring:
       dialect: MySQL8Dialect
       ddl-auto: create
 
+
 management:
   endpoints:
     web:
